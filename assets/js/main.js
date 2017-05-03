@@ -1,5 +1,5 @@
 $(function(){
-    setTimeout(boxRollovers, 2000)
+    setTimeout(boxRollovers, 5000)
 });
 
 var layers = [
