@@ -75,7 +75,7 @@ img {
     overflow: hidden;
     height: 100vh;
     background-color: #202020;
-    animation: fake-loading 5s ease forwards;
+    animation: fake-loading 2s ease forwards;
 }
 
 .loader__force-full-width {
@@ -101,7 +101,6 @@ img {
 
 .loader__image img {
     width: 100%;
-    position: relative;
     z-index: 10;
 }
 
@@ -135,10 +134,31 @@ img {
 }
 
 .loader__scroll-down img {
-    position: relative;
     top: 0px;
+    position: relative;
     animation: scroll-down 2s linear infinite;
 }
+
+.loader__logo-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50 !important;
+}
+
+.loader__logo-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20 !important;
+}
+.loader__logo-3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 20 !important;
+}
+
 /* ----------------------------------------
 
     BITS
@@ -187,6 +207,49 @@ img {
 
 /* ----------------------------------------
 
+    INTRO
+
+---------------------------------------- */
+
+.intro {
+    padding: 150px 0;
+}
+
+.intro h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #343434;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.intro h2::after {
+
+}
+
+.intro p {
+    line-height: 27px;
+    color: #494949;
+}
+
+/* ----------------------------------------
+
+    COMPANIES
+
+---------------------------------------- */
+
+.companies {
+    padding: 150px 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00ffff+0,0dff76+100 */
+    background: #00ffff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #00ffff 0%, #0dff76 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #00ffff 0%,#0dff76 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #00ffff 0%,#0dff76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color: #ffffff;
+}
+
+/* ----------------------------------------
+
     FOOTER
 
 ---------------------------------------- */
@@ -195,7 +258,6 @@ img {
 footer {
     padding: 30px;
     color: #FFF;
-    margin-top: 400px;
     background-color: #202020;
     text-align: center;
 }
