@@ -48,6 +48,10 @@ img {
     box-sizing: border-box;
 }
 
+h2 span {
+    color: cyan;
+}
+
 /* ----------------------------------------
 
     LOADER
@@ -218,9 +222,10 @@ img {
 .intro h2 {
     font-weight: bold;
     text-transform: uppercase;
-    color: #343434;
+    color: #2a2a2a;
     position: relative;
     margin-bottom: 30px;
+    font-size: 1.5em;
 }
 
 .intro h2::after {
@@ -246,6 +251,60 @@ img {
     background: -webkit-linear-gradient(-45deg, #00ffff 0%,#0dff76 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #00ffff 0%,#0dff76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     color: #ffffff;
+}
+
+/* ----------------------------------------
+
+    SERVICES
+
+---------------------------------------- */
+
+.services {
+    padding: 150px 0;
+}
+
+.services h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2a2a2a;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.service-item {
+    position: relative;
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+
+.service-item i {
+    color: #dbdbdb;
+    font-size: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.service-info {
+    position: relative;
+    z-index: 5;
+}
+
+.service-info h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #343434;
+}
+
+.service-info p {
+    line-height: 27px;
+    color: #474747;
 }
 
 /* ----------------------------------------
