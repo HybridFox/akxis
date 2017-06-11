@@ -291,7 +291,7 @@ h2 span {
 }
 
 .service-item i {
-    color: #dbdbdb;
+    color: rgba(0, 255, 195, 0.3);
     font-size: 4em;
     position: absolute;
     top: 50%;
@@ -329,22 +329,101 @@ h2 span {
     padding: 150px 0;
 }
 
-.contact input {
+.contact h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2a2a2a;
+    position: relative;
+    margin-bottom: 50px;
+    font-size: 1.5em;
+}
+
+.contact input[type="text"], .contact input[type="email"] {
     display: block;
     width: 100%;
     border: 3px solid #4a4a4a;
     padding: 10px;
     color: #2a2a2a;
     margin-bottom: 30px;
+    background-color: #FFF;
+    position: relative;
+    z-index: 50;
+
+    -moz-background-clip: padding;     /* Firefox 3.6 */
+    -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+    background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+
+    transition: all .2s ease;
+}
+
+.contact input[type="text"]:focus, .contact input[type="email"]:focus {
+    border-color: transparent;
+}
+
+.contact button {
+    border: 3px solid #4a4a4a;
+    background-color: #FFF;
+    display: inline-block;
+    padding: 15px 25px;
+    color: #2a2a2a;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: "Proxima Nova", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+    transition: all .2s ease;
+}
+
+.contact button:hover {
+    border: 3px solid #ffffff;
+    color: #ffffff;
+}
+
+.contact button span {
+    position: relative;
+    z-index: 50;
+}
+
+.contact button::after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(-45deg, #00ffff 0%, #0dff76 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #00ffff 0%,#0dff76 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #00ffff 0%,#0dff76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition: all .2s ease;
+}
+
+.contact button:hover::after {
+    height: 100%;
 }
 
 .contact textarea {
+    position: relative;
+    z-index: 50;
     display: block;
     width: 100%;
     border: 3px solid #4a4a4a;
     padding: 10px;
+    height: 100px;
     color: #2a2a2a;
+    margin-bottom: 30px;
+
+    -moz-background-clip: padding;     /* Firefox 3.6 */
+    -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+    background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+
+    transition: all .2s ease;
 }
+
+.contact textarea:focus {
+    border-color: transparent;
+}
+
 
 .contact label {
     display: block;
@@ -354,6 +433,21 @@ h2 span {
     color: #4a4a4a;
 }
 
+.form-input {
+    position: relative;
+}
+
+.form-input::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: -moz-linear-gradient(-45deg, #00ffff 0%, #0dff76 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #00ffff 0%,#0dff76 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #00ffff 0%,#0dff76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 
 /* ----------------------------------------
 
