@@ -54,6 +54,91 @@ h2 span {
 
 /* ----------------------------------------
 
+    MENU
+
+---------------------------------------- */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50000000000;
+}
+
+.menu__btn {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 40px;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    z-index: 1;
+}
+
+.menu__line {
+    height: 3px;
+    width: 100%;
+    background: #FFF;
+    margin: 10px 0;
+}
+
+.menu__btn .menu__line:nth-child(1) {
+    transition: all .1s ease 0s;
+}
+
+.menu__btn .menu__line:nth-child(2) {
+    transition: all .1s ease .05s;
+}
+
+.menu__btn .menu__line:nth-child(3) {
+    transition: all .1s ease .1s;
+}
+
+.menu__btn:hover .menu__line:nth-child(1) {
+    background: #00ffff;
+}
+
+.menu__btn:hover .menu__line:nth-child(2) {
+    background: #00ffc3;
+}
+
+.menu__btn:hover .menu__line:nth-child(3) {
+    background: #0dff76;
+}
+
+.menu__background {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    background-color: #292929;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    transition: all .5s ease;
+}
+
+.menu__background.menu__background-opened {
+    width: 300vh;
+    height: 300vh;
+    pointer-events: none;
+}
+
+.menu__btn.menu__btn-scrolled .menu__line {
+    background-color: #2a2a2a;
+}
+
+/* ----------------------------------------
+
     LOADER
 
 ---------------------------------------- */
@@ -418,6 +503,7 @@ h2 span {
     background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
 
     transition: all .2s ease;
+    background-color: #FFF;
 }
 
 .contact textarea:focus {

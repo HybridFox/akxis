@@ -2,6 +2,29 @@ $(function(){
     // setTimeout(boxRollovers, 5000)
     boxRollovers();
 
+    var menuOpened = false;
+    var screenHeight = window.innerHeight;
+
+    $('.menu__btn').on('click', function(e) {
+        if (menuOpened) {
+            // Menu is open, close it
+            menuOpened = false;
+            $('.menu__background').removeClass('menu__background-opened');
+        } else {
+            // Menu is closed, open it
+            menuOpened = true;
+            $('.menu__background').addClass('menu__background-opened');
+        }
+    });
+
+    $(document).on('scroll', function(e) {
+        if ($(document).scrollTop() > screenHeight) {
+            $('.menu__btn').addClass('menu__btn-scrolled');
+        } else {
+            $('.menu__btn').removeClass('menu__btn-scrolled');
+        }
+    });
+
     $('.owl-carousel').owlCarousel({
         items: 4,
         center: true,
