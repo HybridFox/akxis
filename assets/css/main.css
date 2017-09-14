@@ -66,6 +66,68 @@ h2 span {
     z-index: 50000000000;
 }
 
+.menu__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}
+
+.menu__container.menu__container-opened ul li {
+    opacity: 1;
+}
+
+.menu__container.menu__container-opened {
+    pointer-events: all;
+}
+
+.menu__container ul {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    list-style: none;
+    z-index: 20;
+}
+
+.menu__container ul li {
+    margin: 100px;
+    opacity: 0;
+    transition: all .2s ease;
+
+}
+
+.menu__container ul li a {
+    font-size: 5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+}
+
+.menu__container ul li a::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    content: "";
+    height: 7px;
+    width: 0%;
+    background-color: #00ffc3;
+    transition: all .3s ease;
+}
+
+.menu__container ul li a:hover::after {
+    width: 100%;
+}
+
 .menu__btn {
     position: absolute;
     left: 50%;
@@ -134,7 +196,25 @@ h2 span {
 }
 
 .menu__btn.menu__btn-scrolled .menu__line {
-    background-color: #2a2a2a;
+    background-color: #434343;
+}
+
+/* ----------------------------------------
+
+    HEADER
+
+---------------------------------------- */
+
+.header {
+    background-color: #292929;
+    border-top: 90px solid #353535;
+    padding: 80px 0;
+}
+
+.header h1 {
+    text-align: center;
+    color: #FFF;
+    margin: 0;
 }
 
 /* ----------------------------------------
@@ -345,7 +425,28 @@ h2 span {
 ---------------------------------------- */
 
 .work {
+    padding: 150px 0;
+}
 
+.work__viewall {
+    text-align: center;
+    background: #00ffff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #00ffff 0%, #0dff76 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #00ffff 0%,#0dff76 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #00ffff 0%,#0dff76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding: 20px;
+    display: block;
+    margin: 100px auto 0 auto;
+    width: 200px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.work__viewall:hover {
+    opacity: .6;
 }
 
 

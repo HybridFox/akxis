@@ -10,18 +10,28 @@ $(function(){
             // Menu is open, close it
             menuOpened = false;
             $('.menu__background').removeClass('menu__background-opened');
+            $('.menu__container').removeClass('menu__container-opened');
         } else {
             // Menu is closed, open it
             menuOpened = true;
             $('.menu__background').addClass('menu__background-opened');
+            $('.menu__container').addClass('menu__container-opened');
         }
     });
 
     $(document).on('scroll', function(e) {
-        if ($(document).scrollTop() > screenHeight) {
-            $('.menu__btn').addClass('menu__btn-scrolled');
+        if (window.location.pathname === "/" || window.location.pathname === "/index.php" || window.location.pathname === "/index") {
+            if ($(document).scrollTop() > screenHeight) {
+                $('.menu__btn.menu__btn-needsscrolling').addClass('menu__btn-scrolled');
+            } else {
+                $('.menu__btn.menu__btn-needsscrolling').removeClass('menu__btn-scrolled');
+            }
         } else {
-            $('.menu__btn').removeClass('menu__btn-scrolled');
+            if ($(document).scrollTop() > 282) {
+                $('.menu__btn.menu__btn-needsscrolling').addClass('menu__btn-scrolled');
+            } else {
+                $('.menu__btn.menu__btn-needsscrolling').removeClass('menu__btn-scrolled');
+            }
         }
     });
 

@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Title</title>
-
-    <link rel="stylesheet" href="assets/css/grid.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
-</head>
-<body>
-    <div class="menu">
-        <div class="menu__btn">
-            <div class="menu__line"></div>
-            <div class="menu__line"></div>
-            <div class="menu__line"></div>
-        </div>
-        <div class="menu__container">
-
-        </div>
-        <div class="menu__background">
-
-        </div>
-    </div>
+<?php
+include "core/header.php";
+?>
     <div class="loader">
         <div class="loader__light">
             <div class="loader__image">
@@ -105,6 +79,7 @@
     <div class="work">
         <div class="container">
             <img src="assets/img/app.png" alt="">
+            <a href="work.php" class="work__viewall">View All</a>
         </div>
     </div>
     <div class="services">
@@ -153,7 +128,7 @@
     <div class="contact">
         <div class="container">
             <h2>Want to get in <span>contact</span>? This is the place to be.</h2>
-            <form action="/contact" method="POST">
+            <form action="/contact.php" method="POST">
                 <div class="row">
                     <div class="col-md-6">
                         <label for="fullname">Full name</label>
