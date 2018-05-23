@@ -1,0 +1,59 @@
+.status__ready {
+  .transition {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+
+    .transition__layer {
+      position: absolute;
+      pointer-events: none;
+      left: 100%;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+
+      &.transition__layer--1 {
+        background-color: #eeeeee;
+        transition: .4s ease;
+      }
+
+      &.transition__layer--2 {
+        background-color: #dfdfdf;
+        transition: .6s ease .2s;
+      }
+
+      &.transition__layer--3 {
+        background-color: #cccccc;
+        transition: .8s ease .4s;
+      }
+    }
+  }
+}
+
+.status__transition--start {
+  .transition {
+    .transition__layer {
+      transition: 0s;
+
+      &.transition__layer--1 {
+        left: -20%;
+        width: 20%;
+      }
+
+      &.transition__layer--2 {
+        left: -20%;
+        width: 20%;
+      }
+
+      &.transition__layer--3 {
+        left: -20%;
+        width: 20%;
+      }
+    }
+  }
+}
