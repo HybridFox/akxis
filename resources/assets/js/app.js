@@ -16,12 +16,10 @@ setTimeout(() => {
 import PageIndex from './components/pages/Index'
 import PageAbout from './components/pages/About'
 import PageProjects from './components/pages/Projects'
-import PageContact from './components/pages/Contact'
 
 Vue.component('page-index', PageIndex);
 Vue.component('page-about', PageAbout);
 Vue.component('page-projects', PageProjects);
-Vue.component('page-contact', PageContact);
 
 const router = new VueRouter({
     mode: 'history',
@@ -40,20 +38,19 @@ const router = new VueRouter({
             path: '/projects',
             name: 'projects',
             component: PageProjects
-        },
-        {
-            path: '/contact',
-            name: 'contact',
-            component: PageContact
         }
     ]
 });
 
 router.beforeEach((to, from, next) => {
     document.querySelector('body').classList.remove('status__transition--start');
-    document.querySelector('body').classList.add('status__transition--start');
+    setTimeout(() => {
+        document.querySelector('body').classList.add('status__transition--start');
 
-    next();
+        setTimeout(() => {
+            next();
+        }, 300)
+    }, 50);
 });
 
 router.afterEach(() => {
