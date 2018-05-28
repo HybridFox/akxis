@@ -17,10 +17,6 @@
             </div>
         </div>
 
-        <div class="transition__preview">
-            
-        </div>
-
         <div class="menu">
             <ul>
                 <li class="menu__item" @mouseover="startHover" @mouseleave="stopHover">

@@ -22,6 +22,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "promise-polyfill": "^8.0.0",
         "three": "^0.92.0",
         "vue-router": "^3.0.1"
     }

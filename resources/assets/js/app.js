@@ -1,5 +1,6 @@
 require('./webgl');
 
+import 'promise-polyfill/src/polyfill';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
