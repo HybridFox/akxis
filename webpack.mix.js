@@ -20,4 +20,6 @@ mix.js('resources/assets/js/app.js', 'public/assets/js')
             'public/assets/css/app.css',  // Generated .css file
             'public/assets/js/app.js',    // Generated .js file-
         ]
+    }).options({
+        processCssUrls: false
     });

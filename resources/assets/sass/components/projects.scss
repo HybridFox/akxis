@@ -6,7 +6,7 @@
     position: relative;
 
     .projects__image {
-      background: url('../../img/projects.jpg') center center;
+      background: url('/assets/img/projects.jpg') center center;
       background-size: cover;
       position: absolute;
       height: 300px;
@@ -35,7 +35,7 @@
       padding-left: 300px;
       position: relative;
       font-size: 3em;
-      max-width: 700px;
+      max-width: 800px;
       font-weight: bold;
       line-height: 70px;
       left: 200px;
