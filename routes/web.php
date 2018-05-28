@@ -18,7 +18,7 @@ function projects($slug = null) {
             "slug" => "baksteen",
             "website" => "https://bkstn.be",
             "technologies" => "HTML / CSS / JavaScript",
-            "quick_description" => "The best jump up party in whole belgium, the most and best artists from all over whole in one big party.",
+            "quick_description" => "The best jump up party in whole belgium, the most and best artists from all over whole world in one big party.",
             "objective" => "Baksteen had designs for their website but did not find anyone who could make those
                 designs in a responsive website. Also implenting an external partner was needed.",
             "solution" => "Using build tools like SASS & Gulp a website was created using basic techniques.

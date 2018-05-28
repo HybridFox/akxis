@@ -1062,25 +1062,25 @@ table {
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/proxima-nova-thin.ttf");
+  src: url("/assets/fonts/proxima-nova-thin.ttf");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/proxima-nova-regular.ttf");
+  src: url("/assets/fonts/proxima-nova-regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/proxima-nova-semibold.ttf");
+  src: url("/assets/fonts/proxima-nova-semibold.ttf");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/proxima-nova-bold.ttf");
+  src: url("/assets/fonts/proxima-nova-bold.ttf");
   font-weight: 700;
 }
 
