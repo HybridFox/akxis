@@ -1,5 +1,27 @@
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
+  position: relative;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  color: #0a0a0a;
+  text-decoration: none;
+  border: 2px solid #0a0a0a;
+  padding: 12px 20px;
+  transition: all .2s ease;
+  font-family: "Proxima Nova", sans-serif;
+
+  img {
+    height: 11px;
+    padding-right: 5px;
+    width: auto;
+  }
+
+  &:hover {
+    opacity: .5;
+  }
 }

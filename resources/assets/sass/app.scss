@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
 @import "reset";
 @import "variables";
 @import "grid";
+@import "fonts";
 
 @import "components/global";
 @import "components/loader";
@@ -10,3 +10,5 @@
 @import "components/menu";
 @import "components/transition";
 @import "components/about";
+@import "components/projects";
+@import "components/project";

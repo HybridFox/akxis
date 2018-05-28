@@ -20,17 +20,17 @@
 
       &.transition__layer--1 {
         background-color: #eeeeee;
-        transition: .4s ease;
+        transition: .4s $easing-normal;
       }
 
       &.transition__layer--2 {
         background-color: #dfdfdf;
-        transition: .6s ease .2s;
+        transition: .6s $easing-normal .2s;
       }
 
       &.transition__layer--3 {
         background-color: #cccccc;
-        transition: .8s ease .4s;
+        transition: .8s $easing-normal .4s;
       }
     }
   }
@@ -40,15 +40,15 @@
   .transition {
     .transition__layer {
       &.transition__layer--1 {
-        animation: transition--1 1s ease 0s normal forwards;
+        animation: transition--1 1s $easing-normal 0s normal forwards;
       }
 
       &.transition__layer--2 {
-        animation: transition--1 1s ease .2s normal forwards;
+        animation: transition--1 1s $easing-normal .2s normal forwards;
       }
 
       &.transition__layer--3 {
-        animation: transition--1 1s ease .3s normal forwards;
+        animation: transition--1 1s $easing-normal .3s normal forwards;
       }
     }
   }

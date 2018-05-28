@@ -27,7 +27,7 @@
       width: 100%;
       left: 0;
       height: 3px;
-      background-color: #e4e4e4;
+      background-color: #fafafa;
       position: relative;
       transition: max-width .2s ease, height .2s ease .3s;
     }
@@ -36,7 +36,7 @@
 
 .status__loading {
   .loader__bar {
-    animation: loading infinite ease .8s;
+    animation: loading infinite $easing-hard .8s;
   }
 }
 

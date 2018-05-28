@@ -12,7 +12,7 @@
                     </p>
 
                     <p class="about__socials">
-                        <a href="#">linkedin</a> / <a href="#">github</a> / <a href="#">email</a>
+                        <a href="https://www.linkedin.com/in/pieterjan-van-saet/">linkedin</a> / <a href="https://github.com/HybridFox">github</a> / <a href="mailto:pjvansaet@gmail.com">email</a>
                     </p>
                 </div>
             </div>

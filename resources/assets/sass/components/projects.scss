@@ -1,0 +1,119 @@
+.projects {
+  position: relative;
+  margin-top: 150px;
+
+  .projects__intro {
+    position: relative;
+
+    .projects__image {
+      background: url('../../img/projects.jpg') center center;
+      background-size: cover;
+      position: absolute;
+      height: 300px;
+      width: 400px;
+      left: 200px;
+      opacity: 0;
+      transition: all .8s ease .6s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background: #00ffff;
+        background: -moz-linear-gradient(-45deg, rgba(0, 255, 255, 0.8) 0%, #0dff76 100%);
+        background: -webkit-linear-gradient(-45deg, rgba(0, 255, 255, 0.8) 0%,#0dff76 100%);
+        background: linear-gradient(135deg, rgba(0, 255, 255, 0.8) 0%,#0dff76 100%);
+      }
+    }
+
+    p {
+      padding-top: 50px;
+      padding-left: 300px;
+      position: relative;
+      font-size: 3em;
+      max-width: 700px;
+      font-weight: bold;
+      line-height: 70px;
+      left: 200px;
+      opacity: 0;
+      transition: all .8s ease .7s;
+
+      span {
+        width: 40px;
+        height: 5px;
+        background-color: $accent;
+        display: inline-block;
+        position: relative;
+        top: -10px;
+      }
+    }
+  }
+
+  .projects__list {
+    margin-top: 100px;
+    left: 200px;
+    opacity: 0;
+    transition: all .8s ease .8s;
+
+    .projects__item {
+      margin-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        .projects__info {
+          left: 0;
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .projects__info {
+        position: absolute;
+        top: 0px;
+        left: -100%;
+        padding: 50px;
+        height: 100%;
+        background-color: #eeeeee;
+        transition: all .6s ease;
+
+        h3 {
+          font-size: 3em;
+          font-weight: bold;
+          color: #0c0c0c;
+          margin-bottom: 10px;
+        }
+
+        p {
+          margin-bottom: 30px;
+          color: #292929;
+        }
+      }
+    }
+  }
+}
+
+.status__ready {
+  .projects__intro {
+    .projects__image {
+      left: 120px;
+      opacity: .9;
+    }
+
+    p {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  .projects__list {
+    left: 0;
+    opacity: 1;
+  }
+}

@@ -56,6 +56,25 @@
   }
 }
 
+/*
+.transition__preview {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  width: 500px;
+  height: 100vh;
+  background-color: #c0c0c0;
+  z-index: 10;
+  transition: all .2s ease;
+}
+
+.menu--hover {
+  .transition__preview {
+    right: -490px;
+  }
+}
+ */
+
 .status__ready {
   .menu {
     right: 0;

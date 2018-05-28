@@ -10,28 +10,32 @@
     <link rel="stylesheet" href="{{ mix('assets/css/app.css') }}">
 </head>
 <body class="status__loading">
-    <div id="app">
+    <div id="app" :class="{'menu--hover': class_hover}">
         <div class="loader">
             <div class="loader__container">
                 <div class="loader__bar"></div>
             </div>
         </div>
 
+        <div class="transition__preview">
+            
+        </div>
+
         <div class="menu">
             <ul>
-                <li class="menu__item">
+                <li class="menu__item" @mouseover="startHover" @mouseleave="stopHover">
                     <router-link :to="{name: 'index'}">
                         <span class="menu__accent">집</span>
                         <span class="menu__title">Home</span>
                     </router-link>
                 </li>
-                <li class="menu__item">
+                <li class="menu__item" @mouseover="startHover" @mouseleave="stopHover">
                     <router-link :to="{name: 'projects'}">
                         <span class="menu__accent">젝</span>
                         <span class="menu__title">Projects</span>
                     </router-link>
                 </li>
-                <li class="menu__item">
+                <li class="menu__item" @mouseover="startHover" @mouseleave="stopHover">
                     <router-link :to="{name: 'about'}">
                         <span class="menu__accent">약</span>
                         <span class="menu__title">About</span>
