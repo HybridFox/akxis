@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Akxis</title>
 
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="{{ mix('assets/css/app.css') }}">
 </head>
 <body class="status__loading">
-    <div id="app">
+    <div id="app" :class="{'menu--hover': class_hover}">
         <div class="loader">
             <div class="loader__container">
                 <div class="loader__bar"></div>
@@ -19,28 +19,22 @@
 
         <div class="menu">
             <ul>
-                <li class="menu__item">
+                <li class="menu__item" @mouseover="startHover" @mouseleave="stopHover">
                     <router-link :to="{name: 'index'}">
                         <span class="menu__accent">집</span>
                         <span class="menu__title">Home</span>
                     </router-link>
                 </li>
-                <li class="menu__item">
-                    <router-link :to="{name: 'about'}">
-                        <span class="menu__accent">약</span>
-                        <span class="menu__title">About</span>
-                    </router-link>
-                </li>
-                <li class="menu__item">
+                <li class="menu__item" @mouseover="startHover" @mouseleave="stopHover">
                     <router-link :to="{name: 'projects'}">
                         <span class="menu__accent">젝</span>
                         <span class="menu__title">Projects</span>
                     </router-link>
                 </li>
-                <li class="menu__item">
-                    <router-link :to="{name: 'contact'}">
-                        <span class="menu__accent">나</span>
-                        <span class="menu__title">contact</span>
+                <li class="menu__item" @mouseover="startHover" @mouseleave="stopHover">
+                    <router-link :to="{name: 'about'}">
+                        <span class="menu__accent">약</span>
+                        <span class="menu__title">About</span>
                     </router-link>
                 </li>
             </ul>
@@ -59,6 +53,6 @@
         </div>
     </div>
 
-    <script src="assets/js/app.js"></script>
+    <script src="{{ mix('assets/js/app.js') }}"></script>
 </body>
 </html>

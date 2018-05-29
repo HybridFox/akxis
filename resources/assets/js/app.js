@@ -1,3 +1,6 @@
+require('./webgl');
+
+import 'promise-polyfill/src/polyfill';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
@@ -11,17 +14,17 @@ setTimeout(() => {
         document.querySelector('body').classList.remove('status__loaded');
         document.querySelector('body').classList.add('status__ready');
     }, 500);
-}, 1000);
+}, 2000);
 
 import PageIndex from './components/pages/Index'
 import PageAbout from './components/pages/About'
 import PageProjects from './components/pages/Projects'
-import PageContact from './components/pages/Contact'
+import PageProject from './components/pages/Project'
 
 Vue.component('page-index', PageIndex);
 Vue.component('page-about', PageAbout);
 Vue.component('page-projects', PageProjects);
-Vue.component('page-contact', PageContact);
+Vue.component('page-project', PageProject);
 
 const router = new VueRouter({
     mode: 'history',
@@ -42,18 +45,22 @@ const router = new VueRouter({
             component: PageProjects
         },
         {
-            path: '/contact',
-            name: 'contact',
-            component: PageContact
+            path: '/project/:slug',
+            name: 'project',
+            component: PageProject
         }
     ]
 });
 
 router.beforeEach((to, from, next) => {
     document.querySelector('body').classList.remove('status__transition--start');
-    document.querySelector('body').classList.add('status__transition--start');
+    setTimeout(() => {
+        document.querySelector('body').classList.add('status__transition--start');
 
-    next();
+        setTimeout(() => {
+            next();
+        }, 500)
+    }, 50);
 });
 
 router.afterEach(() => {
@@ -64,10 +71,20 @@ const app = new Vue({
     el: '#app',
     router,
     data: {
-
+        class_hover: false
     },
 
     mounted() {
 
+    },
+
+    methods: {
+        stopHover: () => {
+            app.class_hover = false;
+        },
+
+        startHover: () => {
+            app.class_hover = true;
+        }
     }
 });
