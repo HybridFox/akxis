@@ -37,7 +37,7 @@
 
         mounted() {
             let that = this;
-            axios.get('/api/projects')
+            axios.get('/api/v1/projects')
                 .then(response => {
                     that.projects = response.data;
                 })

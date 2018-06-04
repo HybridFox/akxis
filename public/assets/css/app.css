@@ -1812,6 +1812,7 @@ body {
   font-weight: bold;
   font-size: 5em;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .project .project__header .project__headerinfo p {
@@ -1856,6 +1857,11 @@ body {
   line-height: 30px;
 }
 
+.project .project__info .project__bit p ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
 .project .project__images {
   position: relative;
   left: 200px;
@@ -1870,7 +1876,7 @@ body {
 }
 
 .project .project__images .project__image img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .status__ready .project .project__header {

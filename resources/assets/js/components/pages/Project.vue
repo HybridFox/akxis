@@ -59,7 +59,7 @@
         <div class="project__images">
             <div class="container">
                 <div v-for="image in project.images" class="project__image">
-                    <img :src="'/assets/img/work/' + project.slug + '/' + image + '.png'">
+                    <img :src="'/storage/' + image">
                 </div>
             </div>
         </div>
@@ -78,9 +78,10 @@
 
         mounted() {
             let that = this;
-            axios.get('/api/project/' + that.$route.params.slug)
+            axios.get('/api/v1/project/' + that.$route.params.slug)
                 .then(response => {
                     that.project = response.data;
+                    that.project.images = JSON.parse(that.project.images);
                 })
         }
 

@@ -20,11 +20,15 @@ import PageIndex from './components/pages/Index'
 import PageAbout from './components/pages/About'
 import PageProjects from './components/pages/Projects'
 import PageProject from './components/pages/Project'
+import PageSkills from './components/pages/Skills'
+import PageSkill from './components/pages/Skill'
 
 Vue.component('page-index', PageIndex);
 Vue.component('page-about', PageAbout);
 Vue.component('page-projects', PageProjects);
 Vue.component('page-project', PageProject);
+Vue.component('page-skills', PageSkills);
+Vue.component('page-skill', PageSkill);
 
 const router = new VueRouter({
     mode: 'history',
@@ -48,6 +52,16 @@ const router = new VueRouter({
             path: '/project/:slug',
             name: 'project',
             component: PageProject
+        },
+        {
+            path: '/skills',
+            name: 'skills',
+            component: PageSkills
+        },
+        {
+            path: '/skill/:slug',
+            name: 'skill',
+            component: PageSkill
         }
     ]
 });
